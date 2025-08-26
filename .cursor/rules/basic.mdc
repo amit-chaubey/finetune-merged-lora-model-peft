@@ -1,0 +1,39 @@
+# Machine Learning Fine-tuning Philosophy
+Description: Core development principles and workflow for machine learning fine-tuning projects. Apply when discussing model architecture, training workflows, or reviewing fine-tuning code.
+
+When developing fine-tuning projects:
+
+1. **Prioritize Model Quality**: Training stability and convergence come first
+2. **Then Reproducibility**: Experiments should be reproducible and well-documented
+3. **Finally Performance**: Training should be efficient and scalable
+
+## Development Workflow
+
+1. **Understand Requirements**:
+   - Model architecture and base model selection
+   - Training data requirements and preprocessing needs
+   - Performance metrics and evaluation criteria
+
+2. **Architecture Planning**:
+   - LoRA/PEFT configuration and hyperparameters
+   - Training pipeline and data loading strategy
+   - Evaluation and validation approaches
+
+3. **Training Development**:
+   - Data preprocessing and augmentation pipelines
+   - Training loop with proper logging and checkpointing
+   - Hyperparameter tuning and experiment tracking
+
+4. **Model Management**:
+   - Checkpoint saving and loading strategies
+   - Model merging and deployment considerations
+   - Version control for model artifacts
+
+5. **Testing and Validation**:
+   - Training stability and convergence verification
+   - Model performance evaluation on test sets
+   - Cross-validation and robustness testing
+5. **Testing and Validation**:
+   - Component behavior and user interaction testing
+   - Performance monitoring and bundle analysis
+   - Cross-browser and device compatibility verification
