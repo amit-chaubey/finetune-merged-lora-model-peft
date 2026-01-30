@@ -15,13 +15,12 @@
 </p>
 
 ## Overview
-This repository is a **collection of end-to-end fine-tuning notebooks** (LoRA / QLoRA-style) using the modern Hugging Face stack.
-It includes multiple examples across model families and sizes (Phi, Gemma, DialoGPT, SmolLM, DeepSeek distills), plus an example training chart exported from W&B.
+This repository is my **collection of end-to-end fine-tuning notebooks** (LoRA / QLoRA-style) using the modern Hugging Face stack.
+It includes examples across model families and sizes (Phi, Gemma, DialoGPT, SmolLM, DeepSeek distills), plus an example W&B training chart from one of my fine-tuning runs.
 
 ## Contents
 - **Notebooks**: Fine-tuning runs (4-bit) + adapter/merge flows.
-- **Assets**: Example training results (W&B chart exports).
-- **Security**: No hardcoded HF tokens should be present; use environment variables / login helpers.
+- **Assets**: Example training results (W&B chart exports). Hugging Face login helpers.
 
 ## Repo structure
 ```text
@@ -60,7 +59,7 @@ This repo contains multiple fine-tuning notebooks, including:
   - `fine_tune_deepseek_ai_DeepSeek_R1_Distill_Qwen_1_5B_4bit.ipynb`
 
 ## Example training result (W&B export)
-The following chart image was copied from your Downloads and stored under `assets/` as a reference example:
+Below is a W&B training chart export from my **`Llama-3.2-3B-ChatGPT-Prompts-Instruct`** fine-tuning run:
 
 ![W&B training chart example](assets/wandb/wandb-chart-2026-01-29-235217.png)
 
@@ -74,7 +73,3 @@ Most notebooks follow this flow:
 6. Save adapter / merge / export
 7. (Optional) Push artifacts to Hugging Face Hub (use env-based auth)
 
-## Security & tokens
-- **Never hardcode tokens** in notebooks.
-- Prefer `huggingface_hub.login()` / `notebook_login()` with **runtime input** or environment variables.
-- If you see any `hf_...` tokens, remove them before committing.
